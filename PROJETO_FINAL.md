@@ -46,6 +46,9 @@ Porém em entidades grandes e complexas, o mapeamento manual das propriedades da
 
 Tanto o MapStruct quanto o ModelMapper tentam resolver o problema comum de como mapear automaticamente os dados de um objeto para outro, economizando tempo, reduzindo erros e, em alguns casos, melhorando o desempenho.
 
+Para instalar o Mapstruct em nosso projeto, precisamos simplesmente seguir o passo a passo da [documentação](https://mapstruct.org/documentation/installation/).
+
+
 ![img.png](img.png)  
 Na imagem acima vemos o exemplo da entidade Usuário
 
