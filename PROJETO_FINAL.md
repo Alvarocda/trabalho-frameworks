@@ -46,8 +46,38 @@ Porém em entidades grandes e complexas, o mapeamento manual das propriedades da
 
 Tanto o MapStruct quanto o ModelMapper tentam resolver o problema comum de como mapear automaticamente os dados de um objeto para outro, economizando tempo, reduzindo erros e, em alguns casos, melhorando o desempenho.
 
+![img.png](img.png)  
+Na imagem acima vemos o exemplo da entidade Usuário
 
 
+![img_1.png](img_1.png)  
+Na imagem acima vemos como o DTO do usuário que vamos usar para retornar dados para o usuário
+
+
+Para realizar o mapeamento das propriedades do Usuário para o DTO, primeiramente precisamos criar uma interface.
+Nesse exemplo vamos chama-la de UsuarioMapperMS.
+
+![img_3.png](img_3.png)
+1. Com nossa interface criada, precisamos anotar ela com a anotação @Mapper, essa anotação serve para indicar para o Spring que essa será uma interface de mapeamento de entidades e qual será o metodo para injeção de dependecias utilizada pela interface, em nosso exemplo estamos utilizando o padrão "spring" que nos permitirá injetar o mapper em nossas classes através da anotação @Autowired.
+  Agora, precisamos criar nossos metodos de mapeamento, no nosso exemplo temos dois metodos, um chamado toDto e outro chamado toEntity
+
+2. O metodo **toDto** é responsavel por mapear um objeto do tipo Pessoa para um objeto PessoaDto. Esse metodo recebe 3 anotações do tipo @Mapping, essas anotações servem para dar instruções ao mapstruct de como ele deve mapear as propriedades de um objeto para o outro.  
+   1. Na linha 12 estamos dizendo para ele que ao converter a propriedade "nascimento", ja converta a mesma para uma string no formato indicado.  
+   2. Na linha 13 indicamos que a propriedade RG da pessoa corresponde a propriedade numeroRg no DTO.  
+   3. Na linha 14 indicamos para ele que quando formos mapear o CPF, precisamos que ele formate corretamente o CPF de long para string adicionado o 0 a esquerda automaticamente.
+
+3. O metodo **toEntity** é responsavel por fazer o mapeamento inverso, de DTO para entidade.  
+Na linha 16 indicamos para o mapstruct que a propriede numeroRg do DTO corresponde a propriedade rg da entidade.
+
+4. O metodo **formatarCpf** serve como um metodo de apoio ao mapstruct, pois estamos informando pra ele na linha 14 que ao realizar o mapeamento do CPF, ele deve utilizar esse metodo para formatar o mesmo.
+
+Se mandarmos executar nossa aplicação, notaremos que um simbolo verde vai aparecer na frente dos metodos **toDto** e **toEntity**, isso significa que o Mapstruct entendeu corretamente nosso mapeamento e gerou automaticamente o código de mapeamento.
+Ao clicarmos no simbolo verde na frente dos metodos, nossa IDE vai nos levar até os arquivos gerados.
+![img_4.png](img_4.png)  
+Simbolos verdes na frente dos metodos de mapeamento.
+
+![img_5.png](img_5.png)
+Na imagem acima, vemos que o mapstruct criou uma classe chamada PessoaMapperMSImpl que implementa nossa interface criada para o mapper, e também gerou automaticamente o código de mapeamento da entidade para o DTO e vice versa seguindo todas as intruções passadas para ele através das anotações @Mapping
 ## 4. Referências
 
 Inclua a lista de referências utilizadas no projeto ou outras referências interessantes que tiver encontrado e que possam ser úteis para os colegas ao explorar esta ferramenta.

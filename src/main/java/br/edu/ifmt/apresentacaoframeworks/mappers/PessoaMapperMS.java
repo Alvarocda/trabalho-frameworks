@@ -4,16 +4,19 @@ import br.edu.ifmt.apresentacaoframeworks.Dtos.PessoaDto;
 import br.edu.ifmt.apresentacaoframeworks.entities.Pessoa;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
 @Mapper(componentModel = "spring")
 public interface PessoaMapperMS {
 
     @Mapping(target = "nascimento", dateFormat = "dd/MM/yyyy")
     @Mapping(target = "numeroRg", source = "rg")
+    @Mapping(target = "cpf", source = "cpf", qualifiedByName = "formatarCpf")
     PessoaDto toDto(Pessoa pessoa);
-    @Mapping(target = "numeroRg", source = "rg")
+    @Mapping(target = "rg", source = "numeroRg")
     Pessoa toEntity(PessoaDto pessoaDto);
 
+    @Named("formatarCpf")
     default String formatarCpf(Long cpf) {
         if (cpf == null)
             return null;
