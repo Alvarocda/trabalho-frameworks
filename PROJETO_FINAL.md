@@ -82,5 +82,5 @@ Simbolos verdes na frente dos metodos de mapeamento.
 ![img_5.png](img_5.png)
 Na imagem acima, vemos que o mapstruct criou uma classe chamada PessoaMapperMSImpl que implementa nossa interface criada para o mapper, e também gerou automaticamente o código de mapeamento da entidade para o DTO e vice versa seguindo todas as intruções passadas para ele através das anotações @Mapping
 ## 4. Referências
-
-Inclua a lista de referências utilizadas no projeto ou outras referências interessantes que tiver encontrado e que possam ser úteis para os colegas ao explorar esta ferramenta.
+* [Mapstruct](https://mapstruct.org/)
+* [ModelMapper](https://modelmapper.org/)
