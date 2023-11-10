@@ -34,7 +34,7 @@ O MapStruct e o ModelMapper são duas bibliotecas em Java que têm finalidades s
 
 ## 2. Descrição do problema
 
-Ao consultar uma entidade no banco de dados de uma aplicação e retornar os dados para o usuário, informações sensiveis do registro voltam para o usuário que solicitou aquela informação, informações essas como por exemplo senha, dados pessoas e etc, isso se torna um problema quando precisamos esconder essas informações da resposta que retornamos ao usuário com entidades grandes, pois precisamos esconder e mapear manualmente somente os campos necessários utilizando um DTO "Data Transfer Object" (Objeto de Transferência de Dados).
+Ao consultar uma entidade no banco de dados de uma aplicação e retornar os dados para o usuário, informações sensiveis do registro voltam para o usuário que solicitou aquela informação, informações essas como por exemplo senha, dados pessoais e etc, isso se torna um problema pois precisamos esconder essas informações da resposta que retornamos ao usuário.
 
 ![Alt text](image.png)
 
