@@ -10,20 +10,23 @@ import org.mapstruct.Named;
 public interface PessoaMapperMS {
 
     @Mapping(target = "nascimento", dateFormat = "dd/MM/yyyy")
-    @Mapping(target = "numeroRg", source = "rg")
-    @Mapping(target = "cpf", source = "cpf", qualifiedByName = "formatarCpf")
+    @Mapping(target = "cpf", qualifiedByName = "formatarCpf")
     PessoaDto toDto(Pessoa pessoa);
-    @Mapping(target = "rg", source = "numeroRg")
+
     Pessoa toEntity(PessoaDto pessoaDto);
 
     @Named("formatarCpf")
     default String formatarCpf(Long cpf) {
-        if (cpf == null)
+        if (cpf == null) {
             return null;
+        }
+
         StringBuilder sBuilder = new StringBuilder(padLeftZeros(String.valueOf(cpf), 11));
+
         sBuilder.insert(3, ".");
         sBuilder.insert(7, ".");
         sBuilder.insert(11, "-");
+
         return sBuilder.toString();
     }
 
@@ -31,12 +34,16 @@ public interface PessoaMapperMS {
         if (inputString.length() >= length) {
             return inputString;
         }
+
         StringBuilder sb = new StringBuilder();
+
         while (sb.length() < length - inputString.length()) {
             sb.append('0');
         }
+
         sb.append(inputString);
 
         return sb.toString();
     }
+
 }

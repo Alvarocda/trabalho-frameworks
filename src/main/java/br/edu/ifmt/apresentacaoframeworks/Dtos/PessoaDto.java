@@ -6,26 +6,15 @@ public class PessoaDto {
     private Long id;
     private String nome;
     private String cpf;
-
-    private String numeroRg;
     private String nascimento;
 
     public PessoaDto() {
-
     }
 
     public PessoaDto(Long id, String nome, String cpf) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
-    }
-
-    public String getNumeroRg() {
-        return numeroRg;
-    }
-
-    public void setNumeroRg(String numeroRg) {
-        this.numeroRg = numeroRg;
     }
 
     public Long getId() {
@@ -45,7 +34,7 @@ public class PessoaDto {
     }
 
     public String getCpf() {
-        return cpf;
+        return this.cpf;
     }
 
     public void setCpf(String cpf) {

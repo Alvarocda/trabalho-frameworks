@@ -42,15 +42,15 @@ public class PessoasController {
 //        }).toList();
 
         // usando mapstruct
-//        List<PessoaDto> listaPessoasDto = listaPessoas.stream().map(pessoa ->
-//                pessoaMapperMS.toDto(pessoa)
-//        ).toList();
+        List<PessoaDto> listaPessoasDto = listaPessoas.stream().map(pessoa ->
+            pessoaMapperMS.toDto(pessoa)
+        ).toList();
 
-        // usando mapstruct
-        List<PessoaDto> listaPessoasDto = listaPessoas.stream().map(pessoa -> {
-                    ModelMapper pessoaMapperMM = new ModelMapper();
-                    return pessoaMapperMM.map(pessoa, PessoaDto.class);
-                }).toList();
+        // usando modelMapper
+//        ModelMapper modelMapper = new ModelMapper();
+//        List<PessoaDto> listaPessoasDto = listaPessoas.stream().map(
+//                pessoa -> modelMapper.map(pessoa, PessoaDto.class)
+//        ).toList();
 
         return ResponseEntity.status(200).body(listaPessoasDto);
     }
