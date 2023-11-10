@@ -40,6 +40,10 @@ Ao consultar uma entidade no banco de dados de uma aplicação e retornar os dad
 
 ## 3. Solução
 
+Para resolver esse problema, precisamos criar objetos DTO "Data Transfer Object"(Objeto de Transfêrencia de dados) utilizano somente as propriedades necessárias para atender a requisição do usuário e remover os dados sensiveis, para realizar isso, é necessário fazer manualmente o mapeamentos das propriedades da entidade para as propriedades do DTO.
+
+Porém em entidades grandes e complexas, o mapeamento manual das propriedades da entidade para o DTO pode acabar se tornando uma tarefa extramente demorada, custosa, complexa e com alta probabilidade de falhas com mapeamentos errados ou propriedades importantes que foram esquecidas de serem adicionadas.
+
 Tanto o MapStruct quanto o ModelMapper tentam resolver o problema comum de como mapear automaticamente os dados de um objeto para outro, economizando tempo, reduzindo erros e, em alguns casos, melhorando o desempenho.
 
 
