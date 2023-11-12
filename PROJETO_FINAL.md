@@ -268,7 +268,8 @@ ModelMapper é muito poderoso (canivete suíço para resolver problemas), porém
 é baixa, sem falar na curva de aprendizagem/uso eficaz que é muito acentuada.
 
 ***A solução completa demonstrada aqui, tanto com getters/setters, construtor, MapStruct e ModelMapper,
-se encontra disponível na pasta do projeto, aqui do GitHub***
+se encontra disponível na pasta do projeto, aqui neste endereço do GitHub***: 
+https://github.com/Alvarocda/trabalho-frameworks
 
 ***Para recriar a base de dados para ser usada pela api demonstrada aqui, veja a estrutura no arquivo
 application.properties***
