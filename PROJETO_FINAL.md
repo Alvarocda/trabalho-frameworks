@@ -1,19 +1,3 @@
-# Projeto final
-
-Em grupos de **até seis pessoas**, escolham uma biblioteca ou framework para elaboração do projeto.
-
-## 1. Requisitos
-- Seu projeto deverá ser entregue no formato de link de repositório público do GitHub, a ser enviado para o email `ah.driano@gmail.com` com o título `Projeto Final - IFMT 2023` até o dia 11/11/2023. Este repositório deve conter o código da solução e um arquivo `README.md` conforme o exemplo em anexo.
-- O trabalho também deverá ser apresentado no formato de seminário no dia 11/11/2023. Esta apresentação deverá ter entre 15 e 30 minutos.
-- A biblioteca ou framework utilizados poderão ser relacionados à qualquer tecnologia, à escolha do grupo.
-
-Referências úteis para escrita de documentos Markdown:
-- [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
-- [GitHub Docs - Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [Mermaid](https://mermaid.js.org/intro/)
-
-
----
 
 # Projeto Final - Desenvolvimento de Software Através de Frameworks @ IFMT/2023
 
