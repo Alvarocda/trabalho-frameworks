@@ -11,10 +11,11 @@ public class PessoaDto {
     public PessoaDto() {
     }
 
-    public PessoaDto(Long id, String nome, String cpf) {
+    public PessoaDto(Long id, String nome, String cpf, String nascimento) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
+        this.nascimento = nascimento;
     }
 
     public Long getId() {
