@@ -14,7 +14,7 @@
 ## 1. Descrição da biblioteca/framework
 
 MapStruct e ModelMapper são algumas das muitas soluções voltadas para mapeamento de dados, 
-quando se esta desenvolvendo softwares utilizando o paradigma de orientação a objetos.
+quando se esta desenvolvendo softwares utilizando o paradigma de orientação a objetos em Java.
 
 
 ## 2. Descrição do problema
